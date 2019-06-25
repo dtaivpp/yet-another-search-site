@@ -8,7 +8,7 @@ Here is an overview of the architecture used. This is by no means all that is in
 
 ![Architecture Image](./Images/SearchEngine.png)
 
-Kafka is used as the core for this system. This is because it can support the scale needed for this project. This is because it supports message driven architecture. The way this works is nodes that have the same functionality are assigned a consumer group. Any time one of the consumers reaches out for the next link for example Kafka will produce the next link that has not been consumed by that consumer group. In this way multiple consumer groups can query the same data and be operating at their own speed over the data. 
+Kafka is used as the core for this system, because it can support the scale needed for this project. The way this works is nodes that have the same functionality are assigned a consumer group. Any time one of the consumers reaches out for the next link for example Kafka will produce the next link that has not been consumed by that consumer group. In this way multiple consumer groups can query the same data and be operating at their own speed over the data. 
 
 Kafka operates similar to TCP in the sense that it has measures in place to ensure that the consumer was able to process the data. If a consumer was to die mid-process it could provide that link to the next consumer. 
 
